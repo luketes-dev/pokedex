@@ -1,8 +1,10 @@
-var pokemon_types = []
+var URL = 'https://pokeapi.co/api/v2/'
+
+var all_pokemons = {}
 
 // Função global que busca os dados de acordo com o que for solicitado
 async function search_datas (data, limit) {
-    const global_datas = await fetch(`https://pokeapi.co/api/v2/${data}?limit=${limit}`)
+    const global_datas = await fetch(`${URL}${data}?limit=${limit}`)
     const response = await global_datas.json()
     return response
 }
@@ -11,11 +13,19 @@ async function search_datas (data, limit) {
 async function types() {
     const all_types = await search_datas('type', 30)
     
-    for(type of all_types.results) {
-        pokemon_types.push(type.name)
+    for(let type of all_types.results) {
+        console.log(type.name)
     }
-
-    console.log(pokemon_types)
 }
 
-types()
+async function pokemons() {
+    const all_pokemons = await search_datas('pokemon', 1500)
+
+    for(let pokemon of all_pokemons.results) {
+        const pokemons_datas = await fetch(`${URL}pokemon/${pokemon.name}`)
+        const pokemons_response = await pokemons_datas.json()
+        console.log(pokemons_response)
+    }
+}
+
+pokemons()
