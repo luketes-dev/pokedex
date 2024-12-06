@@ -101,6 +101,8 @@ function card_pokemon(id, name, types, weight, height, sprite_url) {
         type_field.innerText = type.type.name
         type_field.classList.add('type')
 
+        type_field.style.backgroundColor = 'var(--' + type.type.name + ")"
+
         container_types.appendChild(type_field)
         card.appendChild(container_types)
     }
