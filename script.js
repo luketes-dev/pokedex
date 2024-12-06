@@ -1,7 +1,7 @@
 var URL_GLOBAL = 'https://pokeapi.co/api/v2'
 var next_page
 
-let main = document.querySelector('main')
+let container_cards = document.querySelector('#container-cards')
 
 // Função que busca todos os tipos dos pokémons
 // async function types() {
@@ -89,6 +89,9 @@ function card_pokemon(id, name, types, weight, height, sprite_url) {
     container_characteristics.appendChild(weight_box)
 
     const button_more_details = document.createElement('a')
+    button_more_details.innerText = 'Mais Detalhes'
+    button_more_details.classList.add('btn')
+    button_more_details.id = 'btn-more-details'
 
     card.appendChild(id_field)
     card.appendChild(sprite)
@@ -102,8 +105,9 @@ function card_pokemon(id, name, types, weight, height, sprite_url) {
         card.appendChild(container_types)
     }
     card.appendChild(container_characteristics)
+    card.appendChild(button_more_details)
     
-    main.appendChild(card)
+    container_cards.appendChild(card)
 }
 
 pokemons(URL_GLOBAL)
