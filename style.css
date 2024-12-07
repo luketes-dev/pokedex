@@ -1,6 +1,22 @@
 :root {
     --grass: #14A414;
     --poison: #B555FF;
+    --water: #2980EF;
+    --fire: #E62829;
+    --flying: #81B9EF;
+    --dragon: #5060E1;
+    --fighting: #FF8000;
+    --ice: #3DCEF3;
+    --ghost: #704170;
+    --psychic: #EF4179;
+    --fairy: #EF70EF;
+    --electric: #FAC000;
+    --ground: #915121;
+    --normal: #9FA19F;
+    --bug: #91A119;
+    --dark: #624D4E;
+    --rock: #AFA981;
+    --steel: #60A1B8;
 }
 
 * {
@@ -72,10 +88,6 @@ main {
     gap: 20px;
 
     position: relative;
-
-    background: url("./images/pokeball_background.png") center/contain no-repeat, linear-gradient(var(--grass), var(--poison));
-    background-color: #00000080;
-    background-blend-mode: darken;
 }
 
 .index {
@@ -103,10 +115,8 @@ main {
 }
 
 .type {
-    width: 65px;
-    height: 25px;
+    padding: 4px 15px;
 
-    border: 1px solid #000;
     border-radius: 6px;
 
     text-transform: capitalize;
