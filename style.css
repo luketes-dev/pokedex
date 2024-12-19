@@ -36,6 +36,23 @@ body {
     color: #fff;
 }
 
+header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 80px;
+}
+
+header h1 {
+    width: 500px;
+    text-align: center;
+}
+
 main {
     width: 980px;
 
@@ -144,4 +161,45 @@ main {
 .weight_field, .height_field {
     font-size: .7rem;
     text-align: center;
+}
+
+.container-search {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+}
+
+#search {
+    width: 35rem;
+
+    border: none;
+    border-bottom: 1px solid #fff;
+
+    background: transparent;
+
+    padding: 1px 10px;
+}
+
+#search:focus {
+    outline: none;
+    caret-color: #fff;
+}
+
+.container-search #enter {
+    width: 15px;
+
+    cursor: pointer;
+}
+
+.container-search #filter {
+    width: 30px;
+
+    cursor: pointer;
+
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
 }

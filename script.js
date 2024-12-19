@@ -41,11 +41,11 @@ function card_pokemon(id, name, types, weight, height, sprite_url) {
     const card = document.createElement('div')
     card.classList.add('card')
     card.id = id
-    
+
     if(types.length > 1) {
-        card.style.background = `url("./images/pokeball_background.png") center/contain no-repeat, linear-gradient(var(--${types[0].type.name}), var(--${types[1].type.name}))`
+        card.style.background = `url("./images/backgrounds/pokeball_background.png") center/contain no-repeat, linear-gradient(var(--${types[0].type.name}), var(--${types[1].type.name}))`
     } else {
-        card.style.background = `url("./images/pokeball_background.png") center/contain no-repeat, linear-gradient(var(--${types[0].type.name}) 60%, transparent)`
+        card.style.background = `url("./images/backgrounds/pokeball_background.png") center/contain no-repeat, linear-gradient(var(--${types[0].type.name}) 60%, transparent)`
     }
     card.style.backgroundColor = '#00000080'
     card.style.backgroundBlendMode = 'darken'
